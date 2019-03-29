@@ -1,6 +1,8 @@
 # ngx-aaa-datepicker
 > A datepicker that picks single, multiple and range type dates.
 
+# Preview
+![](https://s2.gifyu.com/images/aaae9a6f5a3eb023001.gif)
 # How to
 ## module.ts
 ```typescript
