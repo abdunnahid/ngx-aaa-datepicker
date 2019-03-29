@@ -1,0 +1,68 @@
+<div class="aaa-datepicker">
+  <h2>Pick {{pickerMode === 'single' ? 'Date' : 'Dates'}}</h2>
+  <div class="aaa-datepicker-header">
+    <div *ngIf="!dates || dates.length === 0">
+      <div class="aaa-date-show mode-single aaa-today">
+        <p>Today</p>
+        <p>{{today | date:'d'}}</p>
+        <p>{{today | date:'MMMM'}} {{today | date:'y'}}</p>
+      </div>
+    </div>
+    <div class="aaa-date-show mode-single" *ngIf="pickerMode === 'single' && dates && dates.length > 0">
+      <p>{{dates[0] | date:'y'}}</p>
+      <p>{{dates[0] | date:'d'}}</p>
+      <p>{{dates[0] | date:'MMMM'}}</p>
+    </div>
+    <div class="aaa-date-show mode-range" *ngIf="pickerMode === 'range' && dates && dates.length > 0">
+      <div>
+        <p>{{dates[0] | date:'y'}}</p>
+        <p>{{dates[0] | date:'d'}}</p>
+        <p>{{dates[0] | date:'MMMM'}}</p>
+      </div>
+      <h1>-</h1>
+      <div *ngIf="dates.length > 1">
+        <p>{{dates[dates.length-1] | date:'y'}}</p>
+        <p>{{dates[dates.length-1] | date:'d'}}</p>
+        <p>{{dates[dates.length-1] | date:'MMMM'}}</p>
+      </div>
+    </div>
+    <div class="aaa-date-show mode-multi" *ngIf="pickerMode === 'multi' && dates && dates.length > 0">
+      <div class="horizontal-scroll-wrapper">
+        <div *ngFor="let date of dates">
+          <p>{{date | date:'y'}}</p>
+          <p>{{date | date:'d'}}</p>
+          <p>{{date | date:'MMM'}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="aaa-mode-changer">
+      <div class="radio">
+        <input [disabled]='!pickerModes.single' id="radio-1" name="mode" type="radio" [(ngModel)]="pickerMode"
+          value="single" checked (change)="changeDatepickerMode($event)">
+        <label for="radio-1" class="radio-label aaa-ripple">Single</label>
+      </div>
+      <div class="radio">
+        <input [disabled]='!pickerModes.multi' id="radio-2" name="mode" type="radio" [(ngModel)]="pickerMode"
+          value="multi" (change)="changeDatepickerMode($event)">
+        <label for="radio-2" class="radio-label aaa-ripple">Multiple</label>
+      </div>
+      <div class="radio">
+        <input [disabled]='!pickerModes.range' id="radio-3" name="mode" type="radio" [(ngModel)]="pickerMode"
+          value="range" (change)="changeDatepickerMode($event)">
+        <label for="radio-3" class="radio-label aaa-ripple">Range</label>
+      </div>
+    </div>
+  </div>
+  <div class="aaa-calendar">
+    <aa-animatepicker (change)="changeDate()" [options]="datepickerOptions" [(selectedDates)]="dates" #ngxAAAdatepicker
+      class="aa-animatepicker">
+      <button (click)="previous()" class="aaa-datepicker-left-arrow aaa-ripple">
+        <img src="https://img.icons8.com/material-rounded/48/000000/chevron-right.png">
+      </button>
+      <button (click)="next()" class="aaa-datepicker-right-arrow aaa-ripple">
+        <img src="https://img.icons8.com/material-rounded/48/000000/chevron-right.png">
+      </button>
+    </aa-animatepicker>
+  </div>
+  <button (click)="changeDate()" class="aaa-done aaa-ripple">Done</button>
+</div>

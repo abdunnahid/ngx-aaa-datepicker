@@ -1,0 +1,22 @@
+{
+  "name": "ngx-aaa-datepicker",
+  "version": "0.0.1",
+  "description": "A datepicker that picks single, multiple and range type dates.",
+  "author": "Md. Abdun Nahid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nahid-Rezvee/ngx-aaa-datepicker.git"
+  },
+  "homepage": "https://github.com/Nahid-Rezvee/ngx-aaa-datepicker.git",
+  "keywords": [
+    "angular",
+    "datepicker",
+    "multiple-datepicker",
+    "range-datepicker"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^7.1.0",
+    "@angular/core": "^7.1.0"
+  }
+}

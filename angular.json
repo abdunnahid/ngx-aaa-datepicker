@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "ngx-aaa-datepicker": {
+      "root": "projects/ngx-aaa-datepicker",
+      "sourceRoot": "projects/ngx-aaa-datepicker/src",
+      "projectType": "library",
+      "prefix": "NgxAAA",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-aaa-datepicker/tsconfig.lib.json",
+            "project": "projects/ngx-aaa-datepicker/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-aaa-datepicker/src/test.ts",
+            "tsConfig": "projects/ngx-aaa-datepicker/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-aaa-datepicker/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-aaa-datepicker/tsconfig.lib.json",
+              "projects/ngx-aaa-datepicker/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "aaa-datepicker-library"
