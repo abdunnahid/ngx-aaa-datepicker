@@ -31,3 +31,5 @@
 ```html
     <ngx-aaa-datepicker [pickerModes]='pickerModes' (getDate)='getDate($event)'></ngx-aaa-datepicker>
 ```
+# Licence
+MIT
