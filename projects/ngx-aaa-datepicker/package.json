@@ -1,6 +1,6 @@
 {
   "name": "ngx-aaa-datepicker",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A datepicker that picks single, multiple and range type dates.",
   "author": "Md. Abdun Nahid",
   "repository": {
