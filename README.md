@@ -4,8 +4,9 @@
 # Preview
 ![](https://s2.gifyu.com/images/aaae9a6f5a3eb023001.gif)
 
-# Using With Material Demo
->[Github](https://github.com/Nahid-Rezvee/ngx-aaa-datepicker-demo-material)
+# Demo
+> Check out the Angular Material implementation of **ngx-aaa-datepicker** 
+> [Github](https://github.com/Nahid-Rezvee/ngx-aaa-datepicker-demo-material)
 
 # How to
 ## module.ts
